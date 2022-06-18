@@ -4,10 +4,9 @@ services:
     container_name: nerdrealm-minecraft
     build:
       context: .
-      args:
-        version: "1.19"
     environment:
-      - SERVER_NAME="Nerdrealm Minecraft Server"
+      - VERSION="1.19"
+      - MC_MEMORY=8192
     volumes:
       - type: bind
         source: ./volume

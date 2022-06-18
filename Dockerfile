@@ -1,10 +1,6 @@
 FROM alpine:3.15.4
-ARG version="1.19"
 ENV MC_MEMORY 2560
-ENV SERVER_NAME "PaperMC"
-ENV MOTD "PaperMC"
-ENV VIEW_DISTANCE 10
-ENV VERSION ${version}
+ENV VERSION "1.19"
 
 RUN apk update
 RUN apk add bash
@@ -19,8 +15,6 @@ WORKDIR /opt/minecraft
 COPY /script/entrypoint.sh /entrypoint.sh
 COPY /script/server_start.sh /opt/minecraft/start.sh
 COPY /script/get_latest_paper.php /opt/minecraft/get_latest_paper.php
-
-RUN php8 /opt/minecraft/get_latest_paper.php
 
 COPY files/server.properties /opt/minecraft/server.properties
 COPY files/eula.txt /opt/minecraft/eula.txt
