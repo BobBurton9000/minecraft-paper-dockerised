@@ -1,0 +1,16 @@
+version: "3"
+services:
+  nerdrealm-minecraft:
+    container_name: nerdrealm-minecraft
+    build:
+      context: .
+      args:
+        version: "1.19"
+    environment:
+      - SERVER_NAME="Nerdrealm Minecraft Server"
+    volumes:
+      - type: bind
+        source: ./volume
+        target: /home/minecraft
+    ports:
+      - "25565:25565"

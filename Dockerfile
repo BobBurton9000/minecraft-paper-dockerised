@@ -21,8 +21,6 @@ COPY /script/server_start.sh /opt/minecraft/start.sh
 COPY /script/get_latest_paper.php /opt/minecraft/get_latest_paper.php
 
 RUN php8 /opt/minecraft/get_latest_paper.php
-RUN adduser -D minecraft
-USER minecraft
 
 COPY files/server.properties /opt/minecraft/server.properties
 COPY files/eula.txt /opt/minecraft/eula.txt
