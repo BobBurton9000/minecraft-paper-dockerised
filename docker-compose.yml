@@ -5,7 +5,7 @@ services:
     build:
       context: .
     environment:
-      - VERSION="1.19"
+      - VERSION=1.19
       - MC_MEMORY=8192
     volumes:
       - type: bind

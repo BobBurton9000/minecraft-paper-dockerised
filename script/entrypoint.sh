@@ -12,6 +12,6 @@ if [ -f "/home/minecraft/server.properties" ]; then
   echo "Properties exists";
 else
   cp /opt/minecraft/server.properties /home/minecraft/server.properties
-if
+fi
 
 bash /opt/minecraft/start.sh
