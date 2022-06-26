@@ -2,6 +2,7 @@ version: "3"
 services:
   nerdrealm-minecraft:
     container_name: nerdrealm-minecraft
+    restart: unless-stopped
     build:
       context: .
     environment:
