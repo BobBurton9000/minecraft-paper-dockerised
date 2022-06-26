@@ -19,7 +19,7 @@ COPY /script/get_latest_paper.php /opt/minecraft/get_latest_paper.php
 COPY files/server.properties /opt/minecraft/server.properties
 COPY files/eula.txt /opt/minecraft/eula.txt
 
-EXPOSE 19132/udp
+EXPOSE 25575/tcp
 EXPOSE 25565/tcp
 
 ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
