@@ -1,10 +1,9 @@
-FROM alpine:3.15.4
+FROM amazoncorretto:18-alpine
 ENV MC_MEMORY 2560
 ENV VERSION "1.19"
 
 RUN apk update
 RUN apk add bash
-RUN apk add openjdk17
 RUN apk add nano
 RUN apk add php8
 RUN apk add php8-openssl
